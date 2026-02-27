@@ -1,0 +1,149 @@
+/* Hero Slider Styles - Modern */
+.hero-slider {
+  width: 100%;
+  background: white;
+  margin-bottom: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-lg);
+}
+
+.hero-slider .slick-slider {
+  margin: 0;
+}
+
+.slide {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.35);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 70px 60px;
+  color: white;
+}
+
+.slide-content h1 {
+  color: white;
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.slide-content p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.25rem;
+  margin-bottom: 35px;
+  max-width: 500px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.btn-cta {
+  padding: 14px 42px;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-cta:hover {
+  background-color: #936a3d;
+  transform: translateX(6px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+/* Slick Styles Override */
+.slick-dots {
+  bottom: 20px !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+  font-size: 12px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--secondary-color) !important;
+}
+
+.slick-next,
+.slick-prev {
+  z-index: 10 !important;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: white !important;
+  font-size: 30px !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slide {
+    height: 350px;
+  }
+
+  .slide-content {
+    padding: 40px;
+  }
+
+  .slide-content h1 {
+    font-size: 2rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+  }
+
+  .btn-cta {
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    height: 250px;
+  }
+
+  .slide-content {
+    padding: 20px;
+  }
+
+  .slide-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .slide-content p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+
+  .btn-cta {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
